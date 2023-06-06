@@ -17,6 +17,24 @@
             </div>
             <form id="chat-form">
                 <input type="text" id="message-input" placeholder="Type your message..." />
+                <span id="sev">
+                    <label for="severity">Severity :</label>
+                    <select name="severity" id="severity">
+                        <option value="low">Low</option>
+                        <option value="low">Mild</option>
+                        <option value="extreme">Extreme</option>
+                    </select>
+                </span>
+                <span id="con">
+                    <label for="condition">Condition :</label>
+                    <select name="condition" id="condition">
+                        <option value="cough">Cough</option>
+                        <option value="sneeze">Sneezing</option>
+                        <option value="fever">Fever</option>
+                        <option value="cold">Cold</option>
+                    </select>
+                </span>
+                <br>
                 <button type="submit">Send</button>
             </form>
         </div>

@@ -1,9 +1,9 @@
 from flask import Flask,request, render_template
 import requests
-from config import secret_key
 import pyttsx3
+import os
 
-
+secret_key = os.environ.get('SECRET_KEY')
 labels=[]
 def text_to_speech(message):
     engine = pyttsx3.init()
@@ -48,4 +48,5 @@ def reply():
     return render_template('index.html',label=labels)
 
 if __name__=='__main__':
-    app.run(debug=False,host='0.0.0.0')
+    # app.run(debug=False,host='0.0.0.0')
+    app.run(debug=True)

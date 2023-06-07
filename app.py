@@ -49,4 +49,3 @@ def create_app():
         return render_template('index.html',label=labels)
 
     return app
-        

@@ -2,6 +2,7 @@ from flask import Flask,request, render_template
 import requests
 from config import secret_key
 import pyttsx3
+import os
 
 labels=[]
 def text_to_speech(message):
@@ -47,4 +48,4 @@ def reply():
     return render_template('index.html',label=labels)
 
 if __name__=='__main__':
-    app.run(debug=False,host='0.0.0.0')
+    app.run(debug=True)
